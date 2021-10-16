@@ -1,0 +1,49 @@
+%https://tex.stackexchange.com/questions/292427/how-i-can-decorate-latex-wedding-card-with-colors-and-watermark-images
+
+\documentclass[12pt,letterpaper]{report}
+\usepackage[cam,width=4truein,height=6truein,letter,center] {crop}
+\usepackage[T1]{fontenc}
+\usepackage{calligra}
+\usepackage{setspace}
+\usepackage{anysize}
+\marginsize{2cm}{2cm}{6.6cm}{1cm}
+
+\thispagestyle{empty}
+\begin{document}
+	\crop
+	\begin{center}
+		{\sc \scriptsize Mr and Mrs sood Parents}\\
+		{\calligra \small are pleased to announce the marriage of their
+			daughter}\\
+		{\sc \scriptsize Deb}\\
+		{\calligra \small to}\\
+		{\sc \scriptsize Napoleon}\\
+		{\calligra \small son of}\\
+		{\sc \scriptsize Mr and Mrs Dhiman}\\
+		{\calligra \small on March 1,2016}\\
+		{\calligra \small in the Las Vegas}\\
+		\ \\
+		{\calligra \small The pleasure of your company is requested}\\
+		{\calligra \small at a celebration in their honor}\\
+		\ \\
+		\ \\
+		\begin{tabular}{l|l}
+			{\calligra\small Reception                 } & {\calligra\small   Open
+				House}\\
+			\sc{\scriptsize Overpriced Reception Center} & \sc{\scriptsize
+				Somebody's House}\\
+			\sc{\scriptsize 775 East 1200 North        } &   \sc{\scriptsize    4321 West
+				3540 North}\\
+			\sc{\scriptsize Las Vegas, Nevada          } & \sc{\scriptsize   Las
+				Vegas, Nevada}\\
+			\sc{\scriptsize March 1, 2016 } & \sc{\scriptsize Saturday,
+				March 4, 2016}\\
+			\sc{\scriptsize 7:05 p.m. to 9:09 p.m.     } & \sc{\scriptsize   6:59 p.m.
+				to 9:01 p.m.}\\
+		\end{tabular}\\
+		\ \\
+		\ \\
+		{\calligra \small The bride and groom are registered at}\\
+		{\calligra \small Deseret Industries}\\
+	\end{center}
+\end{document}

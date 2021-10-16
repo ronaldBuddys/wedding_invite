@@ -1,0 +1,72 @@
+
+\documentclass{article}
+\usepackage{tabularx}
+\usepackage{tabu} % for horizonal colour
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{xcolor} % colou package
+\usepackage{calligra}
+
+% reduce board margins
+\usepackage[margin=0pt,bottom=0pt,top=0pt]{geometry}
+% remove page number
+\pagenumbering{gobble}
+
+% user defined table spacing (?)
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{C}[1]{%
+>{\vbox to 13.5ex\bgroup\vfill\centering\arraybackslash}%
+p{#1}%
+<{\vskip-\baselineskip\vfill\egroup}}  
+
+\begin{document}
+
+\centering
+\calligra
+
+    
+﻿
+\begin{adjustbox}{width=\pagewidth}
+\begin{tabular}{C{2.5cm} | C{2.5cm} }
+\hline
+reference  & sheet \\ 
+\hline
+&  \\
+\hline
+& \\
+\hline
+& 
+\end{tabular}
+\end{adjustbox}
+
+
+
+\begin{adjustbox}{width=\pagewidth}
+\begin{tabular}{C{2.5cm}C{2.5cm} |}
+
+		Sarah Jacob &  Jill Jingle \\ 
+		Rick S. &  K. Schmidt \\ 
+		David Tall-Building &  S. Apple \\ 
+		K. P. Truck &  Tall Friend \\ 
+
+
+﻿\end{tabular}
+\end{adjustbox}
+\newpage
+
+
+
+\begin{adjustbox}{width=\pagewidth}
+\begin{tabular}{C{2.5cm}C{2.5cm} |}
+
+		BF +1 &  J. Blake \\ 
+		Judy Rob &   @ 1234 \\ 
+
+
+﻿\end{tabular}
+\end{adjustbox}
+\newpage
+
+﻿\end{document}

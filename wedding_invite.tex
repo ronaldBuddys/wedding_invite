@@ -1,0 +1,108 @@
+\documentclass[20pt]{extarticle}
+%paper geometry (shape/size)
+\usepackage{geometry}
+\geometry{  
+	paperheight=8.5in,
+	paperwidth=5.5in,
+	landscape,
+	hmargin={1cm,1cm},
+	vmargin={1cm,1cm}, 
+	top=0.8	cm, 
+	bottom=0.25cm}
+\usepackage{background}
+\usepackage[object=vectorian]{pgfornament}
+%\usepackage{pgfornament}
+\usepackage{pagecolor}
+
+\usepackage{calligra}
+% for background
+\usetikzlibrary{calc}
+
+%\usepackage[scaled]{helvet}
+%\renewcommand\familydefault{\sfdefault} 
+
+% set page colour
+%\pagecolor{yellow!11!white}
+
+% font name reference - for testing different types
+%http://www.tug.dk/FontCatalogue/calligraphicalfonts.html
+% sc is small caps - not a font!
+\def \namefonti {\sc}
+\def \handfonti {\calligra}
+\def \timefonti {\sc}
+\def \csize {3.6}
+
+% url for location link (or another website)
+\def \locationlink{
+https://www.google.co.uk/maps/place/Trafalgar+Square/@51.50809,-0.1302322,17z/}
+
+% hyperlinks to email 
+\iffalse
+%https://tex.stackexchange.com/questions/128424/how-to-create-email-hyperlink-with-predefined-subject-in-latex
+\usepackage{etoolbox}
+\makeatletter
+\newcommand\myemail[3]{
+	\edef\@tempa{mailto:#1?subject=#2 }%
+	\edef\@tempb{\expandafter\html@spaces\@tempa\@empty}%
+	\href{\@tempb}{#3}}
+
+
+\catcode\%=11
+\def\html@spaces#1 #2{#1%20\ifx#2\@empty\else\expandafter\html@spaces\fi#2}
+	\catcode\%=14
+	\makeatother
+	
+\fi
+
+\usepackage[hidelinks]{hyperref}
+
+\backgroundsetup{
+	scale=1,
+	opacity=0.5,
+	angle=0,
+	color=black,
+	contents={%
+		\begin{tikzpicture}[every node/.style={inner sep=0pt}]
+		\node[anchor=north west](CNW)
+		at (current page.north west) {\pgfornament[width=\csize cm]{63}};
+		\node[anchor=north east](CNE)
+		at (current page.north east) {\pgfornament[width=\csize cm,symmetry=v]{63}};
+		\node[anchor=south west](CSW)
+		at (current page.south west) {\pgfornament[width=\csize cm,symmetry=h]{63}};
+		\node[anchor=south east](CSE)
+		at (current page.south east) {\pgfornament[width=\csize cm,symmetry=c]{63}};
+		\end{tikzpicture}%
+	}
+}
+
+\begin{document}
+	
+	%\myemail{test_email@email.com}{Subject}{temp}
+	%\href{mailto:me@somewhere.com?subject=This%20is%20a%20subject}{me@somewhere.com} 
+	%\thispagestyle{empty}
+	\begin{center}
+		%{\namefonti \Large Jane}  \\
+		%{\namefonti \&} \\ 
+		%{\namefonti \Large John} \\
+		{\namefonti \huge John \& Jane} \\
+		\vspace*{6pt}
+		{ \handfonti invite you for food, drinks \& music } \\
+		{\handfonti to celebrate their marriage on} \\
+		\vspace*{14pt}
+		{\handfonti \huge Friday 1, July 2022} \\
+		\vspace*{7pt}
+			\timefonti{\scriptsize \href{locationlink} {\underline{Hyper Link Address}}} \\
+			\timefonti{\scriptsize Some Location} \\
+			\timefonti{\scriptsize Home County,  A1B 2C4, UK} \\
+			\timefonti{\scriptsize 5:00 p.m. to 12:00 a.m.     }
+
+	\vspace*{12pt}
+	%\vspace*{30pt}
+	%{\handfonti \large Dress code: Smart casual, or just casual} \\
+	%\vspace*{8pt}
+	\vspace*{15pt}
+	{\handfonti \large RSVP by phone: 555-666-7777}  \\
+	{\handfonti \large or via email: \timefonti{\scriptsize rsvp@email.com}}
+	
+	\end{center}
+\end{document}
